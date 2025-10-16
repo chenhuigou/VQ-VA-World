@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Bagel-World: Towards High-Quality Visual Question-Visual Answering">
+    <meta name="keywords" content="Bagel-World, Visual Question-Visual Answering, VQVA, Benchmark">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bagel-World: Towards High-Quality Visual Question-Visual Answering</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFGHIJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-ABCDEFGHIJ');
+    </script> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/bagel-world-logo.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-widescreen has-text-centered">
+            <h1 class="title is-1 publication-title">
+                <span class="is-family-code">Bagel-World: Towards High-Quality Visual Question-Visual Answering</span>
+            </h1>
+            <h1 class="title is-3 publication-title">
+                Generating an image, rather than text, in response to a visual question.
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=tlhShPsAAAAJ&hl=en">Chenhui Gou</a><sup>1*</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=2pbka1gAAAAJ&hl=zh-CN">Zilong Chen</a><sup>2*</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://zw615.github.io/">Zeyu Wang</a><sup>3*</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://fengli-ust.github.io/">Feng Li</a><sup>4</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=dENNKrsAAAAJ&hl=en">Deyao Zhu</a><sup>4</sup>,
+                </span>
+                <br>
+                <span class="author-block">
+                <a href="https://zichengduan.github.io/">Zicheng Duan</a><sup>4</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://andy1621.github.io/">Kunchang Li</a><sup>4</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=k0TWfBoAAAAJ&hl=en">Chaorui Deng</a><sup>4</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=FG3O4i8AAAAJ&hl=zh-CN">Hongyi Yuan</a><sup>4</sup>,
+                </span>
+                <br>
+                <span class="author-block">
+                <a href="https://cihangxie.github.io/">Cihang Xie</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=N6czCoUAAAAJ">Jianfei Cai</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=VxAuxMwAAAAJ&view_op=list_works&sortby=pubdate">Hamid Rezatofighi</a><sup>1</sup>
+                </span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+                <span class="author-block"><span style="color: black; font-weight: normal; font-size: small;">*Equal Contribution</span></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Monash University, </span>
+                <span class="author-block"><sup>2</sup>Tsinghua University, </span>
+                <span class="author-block"><sup>3</sup>UC Santa Cruz, </span>
+                <span class="author-block"><sup>4</sup>Bytedance Seed, </span>
+                <span class="author-block"><sup>5</sup>University of Adelaide</span>
+            </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <!-- <span class="link-block">
+                                <a href="https://arxiv.org/pdf/2507.21033"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                </a>
+                            </span> -->
+                            <span class="link-block">
+                                <a href="https://yourdomain.com/yourfile.pdf"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <img src="static/images/bagel-world-logo.png" alt="PDF Icon" style="height: 70%">
+                                    </span>
+                                    <span>PDF</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="javascript:void(0)" class="external-link button is-normal is-rounded is-dark" 
+                                title="Coming soon">
+                                    <span class="icon">
+                                        <img src="static/images/bagel-world-logo.png" alt="PDF Icon" style="height: 70%">
+                                    </span>
+                                    <span>arXiv (Coming Soon)</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://arxiv.org/abs/2507.21033"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <!-- <i class="ai ai-arxiv"></i> -->
+                                        <img src="static/images/ar.svg" alt="arXiv Icon" style="height: 70%">
+                                    </span>
+                                    <span>arXiv</span>
+                                </a>
+                            </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                                <a href="https://github.com/wyhlovecpp/GPT-Image-Edit/tree/main"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                            <br>
+                            <!-- Dataset Link. -->
+                            <span class="link-block">
+                                <a href="https://huggingface.co/datasets/VQVA/BAGEL-World-data"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <!-- <i class="far fa-images"></i> -->
+                                        <img src="static/images/hg.svg" alt="Huggingface Icon" style="height: 70%">
+                                    </span>
+                                    <span>Dataset</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://huggingface.co/datasets/VQVA/IntelligentBench"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <!-- <i class="far fa-images"></i> -->
+                                        <img src="static/images/hg.svg" alt="Huggingface Icon" style="height: 70%">
+                                    </span>
+                                    <span>IntelligentBench</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://huggingface.co/VQVA/BAGEL-World-model"
+                                    class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <!-- <i class="far fa-images"></i> -->
+                                        <img src="static/images/hg.svg" alt="Huggingface Icon" style="height: 70%">
+                                    </span>
+                                    <span>Model</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="javascript:void(0)" class="external-link button is-normal is-rounded is-dark" 
+                                title="Coming soon">
+                                    <span class="icon">
+                                        <!-- <i class="far fa-images"></i> -->
+                                        <img src="static/images/hg.svg" alt="Huggingface Icon" style="height: 70%">
+                                    </span>
+                                    <span>Leaderboard (Coming Soon)</span>
+                                </a>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-widescreen">
+            <div class="hero-body">
+                <img id="teaser-image" src="./static/images/teaser_v2.png" alt="teaser image" width="70%" style="display: block; margin-left: auto; margin-right: auto;">
+                <h2 class="subtitle has-text-centered">
+                    Examples of <span class="is-family-code">Visual Question–Visual Answering (VQ-VA)</span> Dataset.<br>
+                    Highlighting the substantial gap between existing closed-source models and open-weight models.<br>
+                    The rightmost column further shows that a model trained with BAGEL-World significantly improves VQ-VA performance.
+                </h2>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <!-- Abstract. -->
+            <div class="title is-1 has-text-centered">Abstract</div>
+            <div class="content has-text-justified">
+                <p>
+                    This paper studies <i>Visual Question–Visual Answering (VQ-VA)</i>: generating an image, rather than text, in response to a visual question—an ability that has recently emerged in proprietary systems such as NanoBanana and GPT-Image.
+                    To also bring this capability to open-source models, we introduce BAGEL-World, a data-centric framework built around an agentic pipeline for large-scale, targeted data construction.
+                    Leveraging web-scale deployment, this pipeline crawls a massive amount of ~1.8M high-quality, interleaved image–text samples for model training.
+                    For evaluation, we further release IntelligentBench, a human-curated benchmark that systematically assesses VQ-VA along the aspects of <i>world knowledge</i>, <i>design knowledge</i>, and <i>reasoning</i>.
+                    Training with BAGEL-World yields strong empirical gains: it helps LightBAGEL attain 45.0 on IntelligentBench, substantially surpassing the best prior open-source baselines (<em>i.e.</em>, 6.81 from vanilla LightBAGEL; 1.94 from UniWorld-V1), and significantly narrowing the gap toward leading proprietary systems (<em>e.g.</em>, 81.67 from NanoBanana; 82.64 from GPT-Image).
+                    By releasing the full suite of model weights, datasets, and pipelines, we hope it will facilitate future research on VQ-VA.
+                </p>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="title is-1 has-text-centered">BAGEL-World data framework</div>
+        <div class="container is-fullhd">
+            <center>
+                <img id="data-pipeline" src="./static/images/pipeline.png" alt="data pipeline" width="60%">
+            </center>
+            <div class="container is-max-widescreen has-text-centered">
+                <div class="block">
+                    <b>Illustration of the BAGEL-World framework for creating VQ-VA data.</b>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<section class="section">
+    <div class="title is-1 has-text-centered">IntelligentBench: A benchmark for VQ-VA</div>
+    <div class="container is-fullhd">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+            <!-- 左侧文字 -->
+            <div style="flex: 1; min-width: 300px; text-align: left;">
+                <p>
+                    The purpose of IntelligentBench is to evaluate the VQ-VA abilities of different models, where the questions require knowledge and reasoning to answer. Specifically, it contains 360 human-curated examples divided into three domains---world knowledge (171), design knowledge (88), and reasoning (101). 
+The construction of IntelligentBench involves three main steps: (1) Document Review: Human experts examined about 3k classified interleaved web documents and, from each, selected the image pair that best represented the document’s content and exhibited strong semantic connections. (2) Question Design: For each selected image pair, experts designed free-form questions targeting world knowledge, design knowledge, or reasoning. (3) Expert Cross-Review: Every candidate item is independently reviewed by at least another experts; only items that receive unanimous approval are retained.
+                </p>
+            </div>
+
+            <!-- 右侧图片 -->
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img id="bench-example" src="./static/images/bench_examples_v1.png" 
+                     alt="example image" width="70%">
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+    </section>
+    <section class="section">
+        <div class="title is-1 has-text-centered">Results</div>
+        <!-- Main. -->
+        <div class="title is-2 has-text-centered">Quantitative Results</div>
+        <div class="container is-fullhd">
+            <div class="title is-3">Results on VQ-VA: IntelligentBench</div>
+
+            <center>
+                <img src="static/images/intelligentbench.png" width="60%">
+            </center>
+
+        </div>
+
+        <div class="container is-fullhd">
+            <div class="title is-3">Results on RISEBench</div>
+
+            <center>
+                <img src="static/images/RISEBench.png" width="50%">
+            </center>
+
+        </div>
+
+        <div class="container is-fullhd">
+            <div class="title is-3">Results on KRIS-Bench</div>
+
+            <center>
+                <img src="static/images/KRIS.png" width="50%">
+            </center>
+
+        </div>
+
+        <div class="container is-fullhd">
+            <div class="title is-3">Results on G-Edit-Benchmark-EN and Img-Edit </div>
+
+            <center>
+                <img src="static/images/standard_image_editing.png" width="50%">
+            </center>
+
+        </div>
+
+        <div class="block"></div>
+
+        <div class="title is-2 has-text-centered">Qualitative Results</div>
+        <div class="container is-fullhd">
+            <h2 class="subtitle has-text-centered">For complete results on IntelligentBench, please refer to the PDF, which also includes the results on RISEBench.</div>
+
+            </h2>
+        </div>
+
+        <div class="block"></div>
+
+    </section>
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>Incoming</code></pre>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container is-small">
+            <div class="content has-text-centered">
+                <a class="icon-link" href="https://arxiv.org/abs/2507.21033">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                        <p>
+                            The template is modified based on <a href="https://github.com/nerfies/nerfies.github.io">this</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
