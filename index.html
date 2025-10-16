@@ -58,13 +58,15 @@
     <section class="hero">
         <div class="hero-body">
             <div class="container is-max-widescreen has-text-centered">
-            <h1 class="title is-1 publication-title">
-                <span class="is-family-code">Bagel-World: Towards High-Quality Visual Question-Visual Answering</span>
-            </h1>
-            <h1 class="title is-3 publication-title">
-                Generating an image, rather than text, in response to a visual question.
-            </h1>
-
+                <h1 class="title is-3 publication-title">
+                    BAGEL-World
+                    <img src="./static/images/bagel-world-logo.png" alt="Bagel Logo" 
+                        style="height:1.2em; vertical-align:middle; margin:0 0 px;">
+                    : Towards High-Quality Visual Question–Visual Answering
+                </h1>
+                <h2 class="title is-6">Visual Question–Visual Answering (VQ-VA): Generating an image, rather than text, in response to a visual question.</h2>
+            <br> 
+            <br> 
             <div class="is-size-5 publication-authors">
                 <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=tlhShPsAAAAJ&hl=en">Chenhui Gou</a><sup>1*</sup>,
@@ -136,7 +138,7 @@
                                     <span class="icon">
                                         <img src="static/images/bagel-world-logo.png" alt="PDF Icon" style="height: 70%">
                                     </span>
-                                    <span>PDF</span>
+                                    <span>PDF (Coming Soon)</span>
                                 </a>
                             </span>
                             <span class="link-block">
@@ -149,23 +151,23 @@
                                 </a>
                             </span>
                             <span class="link-block">
-                                <a href="https://arxiv.org/abs/2507.21033"
+                                <a href="https://ucsc-vlaa.github.io/LightBagel/"
                                     class="external-link button is-normal is-rounded is-dark">
                                     <span class="icon">
                                         <!-- <i class="ai ai-arxiv"></i> -->
-                                        <img src="static/images/ar.svg" alt="arXiv Icon" style="height: 70%">
+                                        <img src="static/images/light-bagel-logo.png" alt="LightBagel project" style="height: 70%">
                                     </span>
-                                    <span>arXiv</span>
+                                    <span>LightBagel</span>
                                 </a>
                             </span>
                             <!-- Code Link. -->
                             <span class="link-block">
-                                <a href="https://github.com/wyhlovecpp/GPT-Image-Edit/tree/main"
-                                    class="external-link button is-normal is-rounded is-dark">
+                                <a href="javascript:void(0)" class="external-link button is-normal is-rounded is-dark" 
+                                title="Coming soon">
                                     <span class="icon">
                                         <i class="fab fa-github"></i>
                                     </span>
-                                    <span>Code</span>
+                                    <span>Code (Coming Soon)</span>
                                 </a>
                             </span>
                             <br>
@@ -219,24 +221,25 @@
 
     <section class="hero teaser">
         <div class="container is-max-widescreen">
-            <div class="hero-body">
-                <img id="teaser-image" src="./static/images/teaser_v2.png" alt="teaser image" width="70%" style="display: block; margin-left: auto; margin-right: auto;">
-                <h2 class="subtitle has-text-centered">
-                    Examples of <span class="is-family-code">Visual Question–Visual Answering (VQ-VA)</span> Dataset.<br>
-                    Highlighting the substantial gap between existing closed-source models and open-weight models.<br>
-                    The rightmost column further shows that a model trained with BAGEL-World significantly improves VQ-VA performance.
-                </h2>
-
+            <div class="hero-body" style="max-width: 1100px">
+                <div style="margin: 2rem 0;">
+                    <img id="teaser-image" src="./static/images/teaser_v2.png" alt="teaser image" width="100%" style="display: block; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="container is-max-widescreen " style="margin-top: 2rem; max-width: 1000px;">
+                <p style="font-size: 1.05rem; margin-bottom: 1rem; text-align: left; color: #666;">
+                        <b>Results on VQ-VA: IntelligentBench.</b> Fully open-source models (both training data and model weights) are shown without shading, open-weight models are shaded in light blue, and closed-source models are shaded in light gray for clarity.
+                    </p>
+            </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="padding-top: 3rem; padding-bottom: 3rem;">
         <div class="container is-max-widescreen">
             <!-- Abstract. -->
-            <div class="title is-1 has-text-centered">Abstract</div>
-            <div class="content has-text-justified">
-                <p>
+            <div class="title is-1 has-text-centered" style="margin-bottom: 2rem;">Abstract</div>
+            <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.8; max-width: 1100px; margin: 0 auto;">
+                <p style="text-indent: 2em;">
                     This paper studies <i>Visual Question–Visual Answering (VQ-VA)</i>: generating an image, rather than text, in response to a visual question—an ability that has recently emerged in proprietary systems such as NanoBanana and GPT-Image.
                     To also bring this capability to open-source models, we introduce BAGEL-World, a data-centric framework built around an agentic pipeline for large-scale, targeted data construction.
                     Leveraging web-scale deployment, this pipeline crawls a massive amount of ~1.8M high-quality, interleaved image–text samples for model training.
@@ -250,122 +253,548 @@
     </section>
 
 
-    <section class="section">
-        <div class="title is-1 has-text-centered">BAGEL-World data framework</div>
-        <div class="container is-fullhd">
-            <center>
-                <img id="data-pipeline" src="./static/images/pipeline.png" alt="data pipeline" width="60%">
-            </center>
-            <div class="container is-max-widescreen has-text-centered">
-                <div class="block">
-                    <b>Illustration of the BAGEL-World framework for creating VQ-VA data.</b>
-                </div>
+    <section class="section" style="padding-top: 3rem; padding-bottom: 3rem; background-color: #fafafa;">
+        <div class="container is-max-widescreen">
+            <div class="title is-1 has-text-centered" style="margin-bottom: 3rem;">BAGEL-World Data Framework</div>
+            <div style="margin: 2rem auto; max-width: 1000px;">
+                <center>
+                    <img id="data-pipeline" src="./static/images/pipeline.png" alt="data pipeline" width="100%" style="box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
+                </center>
+            </div>
+            <div class="container is-max-widescreen " style="margin-top: 2rem; max-width: 1000px;">
+                <p style="font-size: 1.05rem; margin-bottom: 1rem; text-align: left; color: #666;">
+                        <b>Results on VQ-VA: IntelligentBench.</b> Fully open-source models (both training data and model weights) are shown without shading, open-weight models are shaded in light blue, and closed-source models are shaded in light gray for clarity.
+                    </p>
             </div>
         </div>
-
     </section>
 
-<section class="section">
-    <div class="title is-1 has-text-centered">IntelligentBench: A benchmark for VQ-VA</div>
-    <div class="container is-fullhd">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+<section class="section" style="padding-top: 3rem; padding-bottom: 3rem;">
+    <div class="container is-max-widescreen">
+        <div class="title is-1 has-text-centered" style="margin-bottom: 3rem;">IntelligentBench: A Benchmark for VQ-VA</div>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto;">
             <!-- 左侧文字 -->
-            <div style="flex: 1; min-width: 300px; text-align: left;">
-                <p>
-                    The purpose of IntelligentBench is to evaluate the VQ-VA abilities of different models, where the questions require knowledge and reasoning to answer. Specifically, it contains 360 human-curated examples divided into three domains---world knowledge (171), design knowledge (88), and reasoning (101). 
-The construction of IntelligentBench involves three main steps: (1) Document Review: Human experts examined about 3k classified interleaved web documents and, from each, selected the image pair that best represented the document’s content and exhibited strong semantic connections. (2) Question Design: For each selected image pair, experts designed free-form questions targeting world knowledge, design knowledge, or reasoning. (3) Expert Cross-Review: Every candidate item is independently reviewed by at least another experts; only items that receive unanimous approval are retained.
+            <div style="flex: 1; min-width: 350px; max-width: 550px;">
+                <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify;">
+                    The purpose of IntelligentBench is to evaluate the VQ-VA abilities of different models, where the questions require knowledge and reasoning to answer. Specifically, it contains <b>360 human-curated examples</b> divided into three domains: <b>world knowledge (171)</b>, <b>design knowledge (88)</b>, and <b>reasoning (101)</b>.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; margin-top: 1rem;">
+                    The construction of IntelligentBench involves three main steps: <b>(1) Document Review</b>: Human experts examined about 3k classified interleaved web documents and, from each, selected the image pair that best represented the document's content and exhibited strong semantic connections. <b>(2) Question Design</b>: For each selected image pair, experts designed free-form questions targeting world knowledge, design knowledge, or reasoning. <b>(3) Expert Cross-Review</b>: Every candidate item is independently reviewed by at least another expert; only items that receive unanimous approval are retained.
                 </p>
             </div>
 
             <!-- 右侧图片 -->
-            <div style="flex: 1; min-width: 300px; text-align: center;">
-                <img id="bench-example" src="./static/images/bench_examples_v1.png" 
-                     alt="example image" width="70%">
+            <div style="flex: 1; min-width: 350px; max-width: 600px; text-align: center;">
+                <img id="bench-example" src="./static/images/bench_examples_v1.png"
+                     alt="example image" width="100%" style="box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
             </div>
-            
         </div>
     </div>
 </section>
+    <section class="section" style="padding-top: 3rem; padding-bottom: 3rem; background-color: #fafafa;">
+        <div class="container is-max-widescreen">
+            <div class="title is-1 has-text-centered" style="margin-bottom: 3rem;">Results</div>
 
+            <!-- Quantitative Results -->
+            <div class="title is-2 has-text-centered" style="margin-top: 3rem; margin-bottom: 2rem;">Quantitative Results</div>
 
+            <div style="margin-bottom: 3rem;">
+                <div style="max-width: 1100px; margin: 0 auto; overflow-x: auto;">
+                    <p style="font-size: 1.05rem; margin-bottom: 1rem; text-align: left; color: #666;">
+                        <b>Results on VQ-VA: IntelligentBench.</b> Fully open-source models (both training data and model weights) are shown without shading, open-weight models are shaded in light blue, and closed-source models are shaded in light gray for clarity.
+                    </p>
+                    <table style="width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; line-height: 1.3;">
+                        <thead>
+                            <tr style="background-color: #f2f0f0; border-top: 2px solid #000000; border-bottom: 1px solid #000000">
+                                <th style="padding: 0.7rem 1rem; text-align: left; font-weight: 600; ">Model</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;  line-height: 1.2;">World<br>Knowledge</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;  line-height: 1.2;">Design<br>Knowledge</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600; ">Reasoning</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Overall</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;  ">GPT-Image-1 (OpenAI, 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">84.5</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">80.68</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">81.19</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">82.64</td>
+                            </tr>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;  ">Nano Banana (Nano Banana AI, 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">81.6</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">82.95</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">80.69</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">81.67</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;  ">BAGELThink (Deng et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">61.99</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">55.11</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">62.38</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">60.42</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;  ">Qwen-Image (Wu et al., 2025a)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">38.07</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">33.66</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">32.75</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">34.31</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;  ">FLUX.1-Kontext-Dev (Labs et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">20.18</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">24.43</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">19.80</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">21.11</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;  ">OmniGen2 (Wu et al., 2025b)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">11.11</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">13.07</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">7.92</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">10.69</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;  ">Step1X-Edit (Liu et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">11.7</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">10.23</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">15.35</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">12.36</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;  ">UniWorld-V1 (Lin et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">2.92</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">0.57</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">1.49</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">1.94</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;  ">LightBAGEL</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">6.14</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">7.39</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;  ">7.43</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">6.81</td>
+                            </tr>
+                            <tr style="font-weight: 600; border-top: 1px solid #000000; border-bottom: 2px solid #000000">
+                                <td style="padding: 0.5rem 1rem;">Ours</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">43.57</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">46.02</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center; ">46.53</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">45.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+                <div style="max-width: 1100px; margin: 0 auto; overflow-x: auto;">
+                    <p style="font-size: 1.05rem; margin-bottom: 1rem; text-align: left; color: #666;">
+                        <b>Results on Reasoning-Based Image Editing Benchmark (a): RISEBench.</b> Fully open-source models (both training data and model weights) are shown without shading, open-weight models are shaded in light blue, and closed-source models are shaded in light gray for clarity.
+                    </p>
+                    <table style="width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; line-height: 1.3;">
+                        <thead>
+                            <tr style="background-color: #f2f0f0; border-top: 2px solid #000000; border-bottom: 1px solid #000000">
+                                <th style="padding: 0.7rem 1rem; text-align: left; font-weight: 600;">Model</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Temporal</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Causal</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Spatial</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Logical</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Overall</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">Nano Banana (Nano Banana AI, 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">25.9</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">47.8</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">37.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">18.8</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">32.8</td>
+                            </tr>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">GPT-Image (OpenAI, 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">34.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">32.2</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">37.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">10.6</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">28.9</td>
+                            </tr>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">Gemini-2.0-Flash-exp (Google, 2024)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">8.2</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">15.5</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">23.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.7</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">13.3</td>
+                            </tr>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">Seedream-4.0 (Bytedance Seed, 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">12.9</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">12.2</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">11.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">10.8</td>
+                            </tr>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">BAGELThink (Deng et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">5.9</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">17.7</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">21.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">11.9</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">Qwen-Image-Edit (Wu et al., 2025a)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.7</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">10.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">17.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">2.4</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">8.9</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">FLUX.1-Kontext-Dev (Labs et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">2.3</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">5.5</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">13.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.2</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">5.8</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">Step1X-Edit (Liu et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">2.2</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">2.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.5</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.9</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">OmniGen (Xiao et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.2</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.2</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.8</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">EMU2 (Sun et al., 2024)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.2</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.5</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">HiDream-Edit (Cai et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">FLUX.1-Canny (Labs et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">0.0</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;">LightBAGEL</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.6</td>
+                            </tr>
+                            <tr style="background-color: #f9f9f9; font-weight: 600; border-top: 1px solid #000000; border-bottom: 2px solid #000000">
+                                <td style="padding: 0.5rem 1rem;">Ours</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">14.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">21.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">14.0</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.1</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">12.7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+                <div style="max-width: 1100px; margin: 0 auto; overflow-x: auto;">
+                    <p style="font-size: 1.05rem; margin-bottom: 1rem; text-align: left; color: #666;">
+                        <b>Results on Reasoning-Based Image Editing Benchmark (b): KRIS-Bench.</b> Fully open-source models (both training data and model weights) are shown without shading, open-weight models are shaded in light blue, and closed-source models are shaded in light gray for clarity.
+                    </p>
+                    <table style="width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; line-height: 1.3;">
+                        <thead>
+                            <tr style="background-color: #f2f0f0; border-top: 2px solid #000000; border-bottom: 1px solid #000000">
+                                <th style="padding: 0.7rem 1rem; text-align: left; font-weight: 600;">Model</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Factual</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Conceptual</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Procedural</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600;">Overall Average</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">GPT-4o (OpenAI, 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">86.99</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">80.08</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">78.61</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">82.18</td>
+                            </tr>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">Gemini-2.0 (Google, 2024)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">73.03</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">61.92</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">67.76</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">67.24</td>
+                            </tr>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">Doubao (ByteDance, 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">72.02</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">64.99</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">62.94</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">67.00</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">OmniGen (Xiao et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">44.79</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">34.23</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">34.37</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">38.00</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">Emu2 (Sun et al., 2024)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">57.81</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">43.75</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">43.57</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">48.69</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">BAGEL-Think (Deng et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">62.75</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">62.49</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">42.76</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">57.91</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">Step1X-Edit (Liu et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">53.32</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">52.51</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">37.21</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">49.17</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">AnyEdit (Yu et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">52.06</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">50.96</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">37.68</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">48.21</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">MagicBrush (Zhang et al., 2023)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">54.22</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">47.30</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">34.60</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">46.74</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">InsPix2Pix (Brooks et al., 2023)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">33.38</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">32.47</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">25.84</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">31.22</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;">LightBAGEL</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">57.62</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">50.24</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">41.06</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">50.33</td>
+                            </tr>
+                            <tr style="font-weight: 600; border-top: 1px solid #000000; border-bottom: 2px solid #000000">
+                                <td style="padding: 0.5rem 1rem;">Ours</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">62.10</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">60.11</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">45.02</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">57.16</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+                <div style="max-width: 1100px; margin: 0 auto; overflow-x: auto;">
+                    <p style="font-size: 1.05rem; margin-bottom: 1rem; text-align: left; color: #666;">
+                        <b>Results on Standard Image Editing Benchmark: G-Edit-Benchmark-EN and Img-Edit.</b> Fully open-source models (both training data and model weights) are shown without shading, open-weight models are shaded in light blue, and closed-source models are shaded in light gray for clarity.
+                    </p>
+                    <table style="width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; line-height: 1.3;">
+                        <thead>
+                            <tr style="background-color: #f2f0f0; border-top: 2px solid #000000;">
+                                <th style="padding: 0.7rem 1rem; text-align: left; font-weight: 600;">Model</th>
+                                <th colspan="3" style="padding: 0.7rem 1rem; text-align: center; font-weight: 600; border-bottom: 1px solid #000000">GEdit-Bench-EN</th>
+                                <th style="padding: 0.7rem 1rem; text-align: center; font-weight: 600; border-bottom: 1px solid #000000">ImgEdit-Bench</th>
+                            </tr>
+                            <tr style="background-color: #f2f0f0; border-bottom: 1px solid #000000">
+                                <th style="padding: 0.5rem 1rem; text-align: left; font-weight: 600;"></th>
+                                <th style="padding: 0.5rem 1rem; text-align: center; font-weight: 600;">SC</th>
+                                <th style="padding: 0.5rem 1rem; text-align: center; font-weight: 600;">PQ</th>
+                                <th style="padding: 0.5rem 1rem; text-align: center; font-weight: 600;">Overall</th>
+                                <th style="padding: 0.5rem 1rem; text-align: center; font-weight: 600;">Overall</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">GPT-4o (OpenAI, 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.85</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.62</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.53</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.20</td>
+                            </tr>
+                            <tr style="background-color: #F5F5F5;">
+                                <td style="padding: 0.5rem 1rem;">Gemini-2.0-flash (Google, 2024)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.73</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.61</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.32</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">–</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;">Instruct-Pix2Pix (Brooks et al., 2023)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.58</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">5.49</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.68</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.88</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;">MagicBrush (Zhang et al., 2023)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.68</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">5.66</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.52</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">1.90</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;">AnyEdit (Yu et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.18</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">5.82</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.21</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">2.45</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">ICEdit (Zhang et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">5.11</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.85</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.84</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.05</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">Step1X-Edit (Liu et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.09</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.76</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.70</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.06</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">OmniGen2 (Wu et al., 2025b)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.16</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.77</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.41</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.43</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">BAGEL (Deng et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.36</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.83</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.52</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.20</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">Ovis-U1 (Wang et al., 2025a)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">–</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">–</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.42</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.98</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">UniPic (Wang et al., 2025b)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.72</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.18</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">5.83</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.49</td>
+                            </tr>
+                            <tr style="background-color: #F7F7FF;">
+                                <td style="padding: 0.5rem 1rem;">UniPic 2.0 (Wei et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">–</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">–</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.10</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.06</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;">UniWorld-V1 (Lin et al., 2025)</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.93</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.43</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">4.85</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.26</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.5rem 1rem;">LightBagel</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.56</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.06</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.06</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.65</td>
+                            </tr>
+                            <tr style="background-color: #f9f9f9; font-weight: 600; border-top: 1px solid #000000; border-bottom: 2px solid #000000">
+                                <td style="padding: 0.5rem 1rem;">Ours</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.58</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">7.00</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">6.13</td>
+                                <td style="padding: 0.5rem 1rem; text-align: center;">3.76</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Qualitative Results -->
+            <div class="title is-2 has-text-centered" style="margin-top: 4rem; margin-bottom: 2rem;">Qualitative Results</div>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #363636;">
+                    For complete results on IntelligentBench, please refer to the PDF, which also includes the results on RISEBench.
+                </p>
+            </div>
+        </div>
     </section>
-    <section class="section">
-        <div class="title is-1 has-text-centered">Results</div>
-        <!-- Main. -->
-        <div class="title is-2 has-text-centered">Quantitative Results</div>
-        <div class="container is-fullhd">
-            <div class="title is-3">Results on VQ-VA: IntelligentBench</div>
 
-            <center>
-                <img src="static/images/intelligentbench.png" width="60%">
-            </center>
-
-        </div>
-
-        <div class="container is-fullhd">
-            <div class="title is-3">Results on RISEBench</div>
-
-            <center>
-                <img src="static/images/RISEBench.png" width="50%">
-            </center>
-
-        </div>
-
-        <div class="container is-fullhd">
-            <div class="title is-3">Results on KRIS-Bench</div>
-
-            <center>
-                <img src="static/images/KRIS.png" width="50%">
-            </center>
-
-        </div>
-
-        <div class="container is-fullhd">
-            <div class="title is-3">Results on G-Edit-Benchmark-EN and Img-Edit </div>
-
-            <center>
-                <img src="static/images/standard_image_editing.png" width="50%">
-            </center>
-
-        </div>
-
-        <div class="block"></div>
-
-        <div class="title is-2 has-text-centered">Qualitative Results</div>
-        <div class="container is-fullhd">
-            <h2 class="subtitle has-text-centered">For complete results on IntelligentBench, please refer to the PDF, which also includes the results on RISEBench.</div>
-
-            </h2>
-        </div>
-
-        <div class="block"></div>
-
-    </section>
-
-    <section class="section" id="BibTeX">
+    <section class="section" id="BibTeX" style="padding-top: 3rem; padding-bottom: 3rem;">
         <div class="container is-max-desktop content">
-            <h2 class="title">BibTeX</h2>
-            <pre><code>Incoming</code></pre>
+            <h2 class="title has-text-centered" style="margin-bottom: 2rem;">BibTeX</h2>
+            <div style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3273dc;">
+                <pre style="background-color: transparent; border: none; padding: 0;"><code>Incoming</code></pre>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container is-small">
-            <div class="content has-text-centered">
-                <a class="icon-link" href="https://arxiv.org/abs/2507.21033">
+    <footer class="footer" style="background-color: #f5f5f5; padding: 3rem 1.5rem;">
+        <div class="container">
+            <div class="content has-text-centered" style="margin-bottom: 1.5rem;">
+                <a class="icon-link" href="https://arxiv.org/abs/2507.21033" style="font-size: 2rem; color: #3273dc;">
                     <i class="fas fa-file-pdf"></i>
                 </a>
             </div>
             <div class="columns is-centered">
                 <div class="column is-8">
-                    <div class="content">
+                    <div class="content has-text-centered" style="font-size: 0.95rem; line-height: 1.6;">
                         <p>
                             This website is licensed under a <a rel="license"
-                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" style="color: #3273dc;">Creative
                                 Commons Attribution-ShareAlike 4.0 International License</a>.
                         </p>
                         <p>
-                            The template is modified based on <a href="https://github.com/nerfies/nerfies.github.io">this</a>.
+                            The template is modified based on <a href="https://github.com/nerfies/nerfies.github.io" style="color: #3273dc;">this</a>.
                         </p>
                     </div>
                 </div>
