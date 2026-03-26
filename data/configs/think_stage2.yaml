@@ -1,0 +1,348 @@
+t2i_sft_flux:
+  dataset_names:
+  - flux_v1
+  - flux_17k_20250301
+  - flux_human_20k_20250303
+  - flux_in1k_30k_20250304
+  - flux_in21k_150k_20250300
+  - flux_laion_aesthetics_250k_20250312
+  - flux_openimagev6_250k_20250312
+  - flux_t2iv3_250k_20250312
+  - flux_t2i_compbench_mix_56k_20250316
+  - flux_t2i_compbench_long_145k_20250317
+  - Aesthetic_4K_15k
+  - wallpapers_77k
+  - movie_poster_54k
+  - flux_movie_poster_92k_20250402
+  - flux_t2i_compbench_rephrase_30k_20250421
+  - wallpapers_rephrase_31k_20250421
+  - flux_laion_aesthetics_rephrase_31k_20250421
+  - 4o_gen_20250429_merge_2209
+  - 4o_gen_20250429_short_2209
+  - 4o_gen_20250513_fix_2284
+  - 4o_gen_20250513_short_2284
+  - flux_text_10k_20250305
+  - flux_merge_rephrase_67k_20250503_v1
+  - flux_merge_rephrase_95k_20250503_v2
+  - flux_in21k_67k_20250503_v1
+  - flux_in21k_97k_20250503_v2
+  - flux_movie_poster_66k_20250503_v1
+  - flux_movie_poster_92k_20250503_v2
+  - flux_openimagev6_67k_20250503_v1
+  - flux_openimagev6_103k_20250503_v2
+  - 20250804_dpg_bench_bagel_filtered
+  - 20250804_dpg_bench_general
+  - 20250804_dpg_bench_specific
+  - 20250804_dpg_bench_specific_weighted
+
+  - long_cap_sa1b
+  - longcap_cc12m
+  - blip3o_short
+  - blip3o_sft_60k
+
+  - civit_sfw_669k_20250505
+  - civit_sfw_2m_20250505
+  - civit_sfw_merge
+
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  is_mandatory: false
+  num_used_data:
+  - 136
+  - 126
+  - 20
+  - 240
+  - 1200
+  - 2000
+  - 2000
+  - 2000
+  - 392
+  - 1015
+  - 225
+  - 924
+  - 540
+  - 920
+  - 136
+  - 124
+  - 124
+  - 23
+  - 23
+  - 23
+  - 23
+  - 50
+  - 335
+  - 480
+  - 335
+  - 485
+  - 402
+  - 552
+  - 335
+  - 520
+  - 160
+  - 1000
+  - 1000
+  - 1000
+
+  - 1320
+  - 647
+  - 805
+  - 5000
+
+  - 335
+  - 345
+  - 2232
+
+  weight: 180
+
+deaugmentation_flux:
+  dataset_names:
+  - long_cap_sa1b
+  - longcap_cc12m
+  - blip3o_short
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  is_mandatory: false
+  num_used_data:
+  - 3000
+  - 1472
+  - 1831
+  weight: 2
+
+omnigen:
+  dataset_names:
+  - omnigen_subject_driven
+  num_used_data:
+  - 4112
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: false
+  weight: 20
+
+omniedit_aug:
+  dataset_names:
+  - omniedit_aug
+  num_used_data:
+  - 4576
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: false
+  weight: 40
+
+unified_edit:
+  dataset_names:
+
+  - omni_consistency_2605
+  - gpt4o_image_i2i_47k
+  - nhr_edit_359k
+  - 4o_hqedit_edit_90k
+  - 4o_hqedit_generate_94k
+  - 4o_ultraedit_100k
+  - 4o_omniedit_add_189k
+  - 4o_omniedit_env_137k
+  - 4o_omniedit_modify_204k
+  - 4o_omniedit_remove_150k
+  - 4o_omniedit_style_14k
+  - 4o_omniedit_swap_252k
+  - 4o_omniedit_complex_313k
+
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: true
+  num_used_data:
+
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+
+  weight: 70
+
+uniworld_edit_rewrite:
+  dataset_names:
+  - laion_add_part0_edit
+  - laion_add_part1_edit
+  - results_add_laion_part4_edit
+  - results_add_laion_part5_edit
+  - pandam_action_edit
+  - pandam2_action_edit
+  - pandam3_action_edit
+  - pandam4_action_edit
+  - results_adjust_canny_laion_part0_edit
+  - results_adjust_canny_laion_part2_edit
+  - results_adjust_canny_laion_part3_edit
+  - laion_adjust_canny_part4_edit
+  - results_background_laion_part0_edit
+  - results_background_laion_part2_edit
+  - laion_background_part3_edit
+  - laion_background_part5_edit
+  - laion_background_part7_edit
+  - results_compose_part0_edit
+  - results_compose_part2_edit
+  - results_compose_part6_fix_edit
+  - results_extract_ref_part1_refimg_edit
+  - laion_remove_part0_edit
+  - results_remove_laion_part1_edit
+  - results_remove_laion_part4_edit
+  - results_remove_laion_part5_edit
+  - laion_replace_part0_edit
+  - laion_replace_part1_edit
+  - results_replace_laion_part4_edit
+  - results_replace_laion_part5_edit
+  - results_style_transfer_edit
+  - results_style_transfer_part0_cap36472_edit
+  - ghibli
+  - promptfix
+  - stylebooth
+  num_used_data:
+  - 210
+  - 340
+  - 130
+  - 140
+  - 190
+  - 190
+  - 210
+  - 230
+  - 130
+  - 30
+  - 70
+  - 130
+  - 60
+  - 60
+  - 50
+  - 60
+  - 10
+  - 15
+  - 20
+  - 10
+  - 110
+  - 60
+  - 90
+  - 15
+  - 10
+  - 130
+  - 300
+  - 150
+  - 50
+  - 150
+  - 20
+  - 190
+  - 100
+  - 60
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: false
+  rewrite_prob: 0.9
+  rewrite_prompt_base_dir: ./data/rewrite_prompts/uniworld_edit
+  weight: 50
+
+uid_filted_processed_thinkgen:
+  dataset_names:
+  - world_knowledge_uid_filtered
+  - design_knowledge_uid_filtered_pack
+  - reasoning_uid_filtered_pack
+  - seedance_temporal_10k_more_writed
+  - seedance_temporal_20k_20250907_more_writed
+  - seedance_temporal_20k_20250916_more_writed
+  - seedance_temporal_20251004_more_writed
+  - seedance_temporal_20251005_more_writed
+  num_used_data:
+  - 200
+  - 200
+  - 200
+  - 15 #50
+  - 30 #60
+  - 30
+  - 60
+  - 75
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: false
+  add_system_prompt: false
+  weight: 40
+
+uid_filted_processed_thinkgen1000tokens:
+  dataset_names:
+  - world_knowledge_1000_tokens_repacked_uid_filtered
+  - design_knowledge_1000_tokens_repacked_uid_filtered
+  - reasoning_1000_tokens_repacked_uid_filtered
+  - seedance_temporal_10k_more_writed
+  - seedance_temporal_20k_20250907_more_writed
+  - seedance_temporal_20k_20250916_more_writed
+  - seedance_temporal_20251004_more_writed
+  - seedance_temporal_20251005_more_writed
+  num_used_data:
+  - 200
+  - 200
+  - 200
+  - 15 #50
+  - 30 #60
+  - 30
+  - 60
+  - 75
+  cap_loss_ratio: 1.0
+  add_system_prompt: true
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: true
+  weight: 100

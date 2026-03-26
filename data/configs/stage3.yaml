@@ -1,0 +1,276 @@
+# TODO: double check blip3o and civit weight conversion
+# TODO: double check geneval and dpgbench data
+###### T2I 310
+t2i:
+  dataset_names:
+  - long_cap_sa1b
+  - longcap_cc12m
+  - blip3o_short
+  - blip3o_sft_60k
+  - flux_v1
+  - flux_17k
+  - flux_human_20k
+  - flux_in1k_30k
+  - flux_in21k_150k
+  - flux_laion_aesthetics_250k
+  - flux_openimagev6_250k
+  - flux_t2iv3_250k
+  - flux_t2i_compbench_mix_56k
+  - flux_t2i_compbench_long_145k
+  - Aesthetic_4K_15k
+  - wallpapers_77k
+  - movie_poster_54k
+  - flux_movie_poster_92k
+  - flux_t2i_compbench_rephrase_30k
+  - wallpapers_rephrase_31k
+  - flux_laion_aesthetics_rephrase_31k
+  - 4o_gen_merge_2209
+  - 4o_gen_short_2209
+  - 4o_gen_fix_2284
+  - 4o_gen_short_2284
+  - flux_text_10k
+  - flux_merge_rephrase_67k_v1
+  - flux_merge_rephrase_95k_v2
+  - flux_in21k_67k_v1
+  - flux_in21k_97k_v2
+  - flux_movie_poster_66k_v1
+  - flux_movie_poster_92k_v2
+  - flux_openimagev6_67k_v1
+  - flux_openimagev6_103k_v2
+  - dpg_bench_general
+  - dpg_bench_specific
+  - dpg_bench_specific_weighted
+  - civit_sfw_669k_20250505
+  - civit_sfw_2m_20250505
+  - civit_sfw_merge
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  is_mandatory: true
+  num_used_data:
+  - 1320
+  - 647
+  - 805
+  - 5000
+  - 136
+  - 126
+  - 20
+  - 240
+  - 1200
+  - 2000
+  - 2000
+  - 2000
+  - 392
+  - 1015
+  - 225
+  - 924
+  - 540
+  - 920
+  - 136
+  - 124
+  - 124
+  - 23
+  - 23
+  - 23
+  - 23
+  - 50
+  - 335
+  - 480
+  - 335
+  - 485
+  - 402
+  - 552
+  - 335
+  - 520
+  - 1000
+  - 1000
+  - 1000
+  - 335
+  - 345
+  - 2232
+  weight: 270
+
+###### Editing 222
+deaugmentation:
+  dataset_names:
+  - long_cap_sa1b
+  - longcap_cc12m
+  - blip3o_short
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  is_mandatory: false
+  num_used_data:
+  - 3000
+  - 1472
+  - 1831
+  weight: 2
+
+omnigen:
+  dataset_names:
+  - omnigen_subject_driven
+  num_used_data:
+  - 4112
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: false
+  weight: 20
+
+
+omniedit:
+  dataset_names:
+  - omniedit
+  num_used_data:
+  - 4576
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: false
+  weight: 40
+
+
+unified_edit:
+  dataset_names:
+  - omni_consistency_2605
+  - gpt4o_image_i2i_47k
+  - nhr_edit_359k
+  - 4o_hqedit_edit_90k
+  - 4o_hqedit_generate_94k
+  - 4o_ultraedit_100k
+  - 4o_omniedit_add_189k
+  - 4o_omniedit_env_137k
+  - 4o_omniedit_modify_204k
+  - 4o_omniedit_remove_150k
+  - 4o_omniedit_style_14k
+  - 4o_omniedit_swap_252k
+  - 4o_omniedit_complex_313k
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: true
+  num_used_data:
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  - 400
+  weight: 110
+
+
+uniworld_edit:
+  dataset_names:
+  - laion_add_part0_edit
+  - laion_add_part1_edit
+  - results_add_laion_part4_edit
+  - results_add_laion_part5_edit
+  - pandam_action_edit
+  - pandam2_action_edit
+  - pandam3_action_edit
+  - pandam4_action_edit
+  - results_adjust_canny_laion_part0_edit
+  - results_adjust_canny_laion_part2_edit
+  - results_adjust_canny_laion_part3_edit
+  - laion_adjust_canny_part4_edit
+  - results_background_laion_part0_edit
+  - results_background_laion_part2_edit
+  - laion_background_part3_edit
+  - laion_background_part5_edit
+  - laion_background_part7_edit
+  - results_compose_part0_edit
+  - results_compose_part2_edit
+  - results_compose_part6_fix_edit
+  - results_extract_ref_part1_refimg_edit
+  - laion_remove_part0_edit
+  - results_remove_laion_part1_edit
+  - results_remove_laion_part4_edit
+  - results_remove_laion_part5_edit
+  - laion_replace_part0_edit
+  - laion_replace_part1_edit
+  - results_replace_laion_part4_edit
+  - results_replace_laion_part5_edit
+  - results_style_transfer_edit
+  - results_style_transfer_part0_cap36472_edit
+  - ghibli
+  - promptfix
+  - stylebooth
+  num_used_data:
+  - 210
+  - 340
+  - 130
+  - 140
+  - 190
+  - 190
+  - 210
+  - 230
+  - 130
+  - 30
+  - 70
+  - 130
+  - 60
+  - 60
+  - 50
+  - 60
+  - 10
+  - 15
+  - 20
+  - 10
+  - 110
+  - 60
+  - 90
+  - 15
+  - 10
+  - 130
+  - 300
+  - 150
+  - 50
+  - 150
+  - 20
+  - 190
+  - 100
+  - 60
+  image_transform_args:
+    image_stride: 32
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 28
+    max_image_size: 532
+    min_image_size: 224
+    image_mean: [0.48145466, 0.4578275, 0.40821073]
+    image_std: [0.26862954, 0.26130258, 0.27577711]
+  is_mandatory: false
+  rewrite_prob: 0.9
+  rewrite_prompt_base_dir: /path/to/data/i2i/uniworld/rewrite_prompt/
+  weight: 50

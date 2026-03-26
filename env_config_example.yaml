@@ -1,0 +1,49 @@
+# Environment configuration template
+# Copy this file to env_config.yaml and fill in your paths
+
+# Model weights paths
+vlm_path: "Qwen/Qwen2.5-VL-7B-Instruct"
+vgen_model_path: "Wan-AI/Wan2.2-TI2V-5B"
+vae_path: "Wan-AI/Wan2.2-TI2V-5B/Wan2.2_VAE.pth"
+pre_t5_context_path: "/path/to/pre_t5_context.pt"
+
+# Checkpoint base directories
+checkpoint_base_dir: "/path/to/checkpoints"
+
+# Benchmark data paths
+gedit_data_path: "/path/to/GEdit-Bench/data"
+imgedit_data_path: "/path/to/imgedit/data"
+intelligent_data_path: "/path/to/intelligent_bench/data.parquet"
+kris_data_path: "/path/to/kris/data.json"
+rise_data_path: "/path/to/rise/data"
+
+# Output directories
+output_base_dir: "./results"
+
+# Training paths
+train_output_dir: "/path/to/training/output"
+
+# Data base paths (for dataset_info.py)
+# These map /path/to/data/* placeholders to real data paths
+data_base_path: "/path/to/data"
+i2i_data_base_path: "/path/to/i2i/data"
+thinkgen_data_base_path: "/path/to/thinkgen/data"
+parquet_info_base_path: "/path/to/parquet_info"
+i2i_parquet_info_base_path: "/path/to/i2i/parquet_info"
+rewrite_prompt_base_path: "/path/to/rewrite_prompt"
+
+# API configuration (for GPT-based evaluation)
+openai_api_key: "YOUR_API_KEY"
+openai_base_url: ""
+http_proxy: ""
+https_proxy: ""
+
+# External evaluation tool paths (optional, for scoring steps)
+# These external evaluation scripts are not included in this release.
+# If you have your own benchmark_d7.py, KRIS metrics scripts, or RISE gpt_eval.py,
+# fill in the paths below. If not provided, scoring steps will be skipped gracefully.
+benchmark_eval_dir: ""
+rise_eval_base: ""
+rise_json_path: ""
+kris_eval_base: ""
+imgedit_origin_img_root: ""

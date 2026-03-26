@@ -1,0 +1,14 @@
+# API keys for parallel GPT evaluation
+# Multiple keys enable concurrent requests for faster evaluation
+# Copy this file to api_keys.yaml and fill in your keys.
+
+openai_api_keys:
+  - "YOUR_KEY_1"
+  - "YOUR_KEY_2"
+  - "YOUR_KEY_3"
+
+# Default key (used when only one key is needed)
+default_key: "YOUR_DEFAULT_KEY"
+
+# API base URL (leave empty for default OpenAI endpoint)
+openai_base_url: ""
