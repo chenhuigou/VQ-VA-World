@@ -25,7 +25,7 @@
 <p align="center">
 <a href="https://www.linkedin.com/in/chenhui-gou-9201081a1/">Chenhui Gou</a><sup>1,4*†</sup>,
 <a href="https://scholar.google.com/">Zilong Chen</a><sup>2,4*†</sup>,
-<a href="https://zw615.github.io/">Zeyu Wang</a><sup>3*†</sup>,
+<a href="https://zw615.github.io/">Zeyu Wang</a><sup>3*</sup>,
 <a href="https://fengli-ust.github.io/">Feng Li</a><sup>4</sup>,
 <a href="https://tsutikgiau.github.io/">Deyao Zhu</a><sup>4</sup>,
 Zicheng Duan<sup>5</sup>,
@@ -42,7 +42,7 @@ Hongyi Yuan<sup>4</sup>,
 <sup>1</sup>Monash University, <sup>2</sup>Tsinghua University, <sup>3</sup>UC Santa Cruz, <sup>4</sup>ByteDance Seed, <sup>5</sup>University of Adelaide
 </p>
 
-<p align="center"><em>*Equal contribution, †Project leads</em></p>
+<p align="center"><em>*Equal contribution, †Work done during internship</em></p>
 
 ## 📢 News
 
