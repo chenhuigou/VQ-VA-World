@@ -88,7 +88,11 @@ train = load_dataset("VQVA/BAGEL-World-data", "world_knowledge_uid_filtered")
 
 ## 📊 IntelligentBench
 
-A benchmark for evaluating intelligent image editing models with 360 samples across three categories:
+A benchmark for evaluating intelligent image editing models with 360 samples across three categories.
+
+- **Data**: [VQVA/IntelligentBench](https://huggingface.co/datasets/VQVA/IntelligentBench)
+- **Evaluation Script**: [`eval/intelligent/benchmark_intelligentBench.py`](eval/intelligent/benchmark_intelligentBench.py)
+- **Launch Script**: [`scripts/eval/launch_intelligent.sh`](scripts/eval/launch_intelligent.sh)
 
 | Category | Code | Samples | Description |
 |----------|------|---------|-------------|
