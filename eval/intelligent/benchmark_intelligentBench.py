@@ -643,18 +643,7 @@ def main():
     args = get_args()
     
     # API keys列表
-    api_keys = [
-        '***REMOVED_API_KEY***',
-        '***REMOVED_API_KEY***',
-        '***REMOVED_API_KEY***',
-        # '***REMOVED_API_KEY***',
-        # '***REMOVED_API_KEY***',
-        # '***REMOVED_API_KEY***',
-        # '***REMOVED_API_KEY***',
-        # '***REMOVED_API_KEY***',
-        # '***REMOVED_API_KEY***',
-        # '***REMOVED_API_KEY***'
-    ]
+    api_keys = []
     
     # 设置工作进程数
     num_workers = args.num_workers if args.num_workers else len(api_keys)
