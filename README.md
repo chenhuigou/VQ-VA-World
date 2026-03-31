@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/teaser_v2.png" alt="VQ-VA World" width="95%"/>
+  <img src="https://chenhuigou.github.io/VQ-VA-World/images/teaser_v2.png" alt="VQ-VA World" width="95%"/>
 </p>
 
 <p align="center">
