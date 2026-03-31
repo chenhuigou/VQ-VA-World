@@ -18,6 +18,9 @@
   <a href="https://huggingface.co/datasets/VQVA/BAGEL-World-data">
     <img src="https://img.shields.io/badge/Training-Data-blue?logo=huggingface&logoColor=yellow" alt="Training Data"/>
   </a>
+  <a href="https://github.com/chenhuigou/VQ-VA-World">
+    <img src="https://img.shields.io/badge/GitHub-Code-black?logo=github&logoColor=white" alt="Code"/>
+  </a>
 </p>
 
 # VQ-VA World: Towards High-Quality Visual Question-Visual Answering
@@ -56,13 +59,13 @@ We present **VQ-VA World**, a dataset and benchmark for high-quality Visual Ques
 
 ## 🔗 Resources
 
-| Resource | Link |
-|----------|------|
-| 📄 Paper | [arXiv:2511.20573](https://arxiv.org/abs/2511.20573) |
-| 🌐 Project Page | [chenhuigou.github.io/VQ-VA-World](https://chenhuigou.github.io/VQ-VA-World) |
-| 🤗 Organization | [huggingface.co/VQVA](https://huggingface.co/VQVA) |
-| 📊 IntelligentBench | [VQVA/IntelligentBench](https://huggingface.co/datasets/VQVA/IntelligentBench) |
-| 📦 Training Data | [VQVA/BAGEL-World-data](https://huggingface.co/datasets/VQVA/BAGEL-World-data) |
+<p align="center">
+📄 <a href="https://arxiv.org/abs/2511.20573"><b>Paper</b></a> &nbsp;|&nbsp;
+🌐 <a href="https://chenhuigou.github.io/VQ-VA-World"><b>Project Page</b></a> &nbsp;|&nbsp;
+🤗 <a href="https://huggingface.co/VQVA"><b>HF Organization</b></a> &nbsp;|&nbsp;
+📊 <a href="https://huggingface.co/datasets/VQVA/IntelligentBench"><b>IntelligentBench</b></a> &nbsp;|&nbsp;
+📦 <a href="https://huggingface.co/datasets/VQVA/BAGEL-World-data"><b>Training Data</b></a>
+</p>
 
 ## 🔥 Quick Start
 
