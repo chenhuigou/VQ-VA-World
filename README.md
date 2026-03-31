@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="https://chenhuigou.github.io/VQ-VA-World/images/teaser_v2.png" alt="VQ-VA World" width="70%"/>
-</p>
-
-<p align="center">
   <a href="https://arxiv.org/abs/2511.20573">
     <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoColor=red" alt="Paper"/>
   </a>
@@ -20,13 +16,6 @@
   </a>
   <a href="https://github.com/chenhuigou/VQ-VA-World">
     <img src="https://img.shields.io/badge/GitHub-Code-black?logo=github&logoColor=white" alt="Code"/>
-  </a>
-  <br/>
-  <a href="https://huggingface.co/datasets/VQVA/BAGEL-World-data">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVQVA%2FBAGEL-World-data&query=%24.downloads&label=%F0%9F%93%A6%20Training%20Data%20Downloads&color=blue" alt="Training Data Downloads"/>
-  </a>
-  <a href="https://huggingface.co/datasets/VQVA/IntelligentBench">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVQVA%2FIntelligentBench&query=%24.downloads&label=%F0%9F%93%8A%20Benchmark%20Downloads&color=green" alt="Benchmark Downloads"/>
   </a>
 </p>
 
@@ -56,13 +45,17 @@ Hongyi Yuan<sup>4</sup>,
 
 ## 📢 News
 
-- **Mar 2026:** Training data released on [HuggingFace](https://huggingface.co/datasets/VQVA/BAGEL-World-data).
-- **Mar 2026:** [IntelligentBench](https://huggingface.co/datasets/VQVA/IntelligentBench) benchmark released.
+- **Mar 2026:** Training data released on [HuggingFace](https://huggingface.co/datasets/VQVA/BAGEL-World-data). <a href="https://huggingface.co/datasets/VQVA/BAGEL-World-data"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVQVA%2FBAGEL-World-data&query=%24.downloads&label=downloads&color=blue&logo=huggingface&logoColor=yellow" alt="downloads"/></a>
+- **Mar 2026:** [IntelligentBench](https://huggingface.co/datasets/VQVA/IntelligentBench) benchmark released. <a href="https://huggingface.co/datasets/VQVA/IntelligentBench"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVQVA%2FIntelligentBench&query=%24.downloads&label=downloads&color=green&logo=huggingface&logoColor=yellow" alt="downloads"/></a>
 - **Mar 2026:** Code released.
 
 ## 📖 Abstract
 
 We present **VQ-VA World**, a dataset and benchmark for high-quality Visual Question-Visual Answering. Our approach focuses on training models that can understand visual questions and generate visual answers, spanning tasks including intelligent image editing with world knowledge, reasoning, and design knowledge capabilities.
+
+<p align="center">
+  <img src="https://chenhuigou.github.io/VQ-VA-World/images/teaser_v2.png" alt="VQ-VA World" width="70%"/>
+</p>
 
 ## 🔗 Resources
 
