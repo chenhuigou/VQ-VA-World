@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://chenhuigou.github.io/VQ-VA-World/images/teaser_v2.png" alt="VQ-VA World" width="95%"/>
+  <img src="https://chenhuigou.github.io/VQ-VA-World/images/teaser_v2.png" alt="VQ-VA World" width="70%"/>
 </p>
 
 <p align="center">
@@ -20,6 +20,13 @@
   </a>
   <a href="https://github.com/chenhuigou/VQ-VA-World">
     <img src="https://img.shields.io/badge/GitHub-Code-black?logo=github&logoColor=white" alt="Code"/>
+  </a>
+  <br/>
+  <a href="https://huggingface.co/datasets/VQVA/BAGEL-World-data">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVQVA%2FBAGEL-World-data&query=%24.downloads&label=%F0%9F%93%A6%20Training%20Data%20Downloads&color=blue" alt="Training Data Downloads"/>
+  </a>
+  <a href="https://huggingface.co/datasets/VQVA/IntelligentBench">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FVQVA%2FIntelligentBench&query=%24.downloads&label=%F0%9F%93%8A%20Benchmark%20Downloads&color=green" alt="Benchmark Downloads"/>
   </a>
 </p>
 
